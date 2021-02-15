@@ -80,10 +80,11 @@ lr_lambda = lambda epoch: scheduler_gamma ** epoch
 scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lr_lambda)
 epochs = 10
 model_path = "./models"
+history_path = "./history"
 
 dataset_path = "/home/shouki/Desktop/Programming/Python/AI/Datasets/ImageData/FGVCAirCraftImageDataset"
 image_size = (224, 224)
-batch_size = 64
+batch_size = 32
 train_dataloader, validation_dataloader = create_train_validation_dataloaders(dataset_path, image_size, batch_size)
 
 history = train(model, optimizer, scheduler, criterion, epochs, train_dataloader, validation_dataloader, model_path, device)

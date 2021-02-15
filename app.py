@@ -6,7 +6,7 @@ from predict import predict_label
 app = flask.Flask(__name__)
 app.config["JSON_AS_ASCII"] = False
 
-@app.route("/generate", methods=["POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     response = {
         "success": False,

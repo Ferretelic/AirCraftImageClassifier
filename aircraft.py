@@ -83,4 +83,4 @@ def transform_image(image):
       torchvision.transforms.Resize((224, 224)),
       torchvision.transforms.ToTensor(),
       torchvision.transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
-  return tranform(image)
+  return transform(image)

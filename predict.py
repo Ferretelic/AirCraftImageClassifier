@@ -4,7 +4,7 @@ def load_label_data(self, dataset_path):
     with open(os.path.join(dataset_path, "variants.txt"), "r") as f:
       return {index: label for index, label in enumerate(f.read().strip().split("\n"))}
 
-def predcit_label(image):
+def predict_label(image):
   dataset_path = "/home/shouki/Desktop/Programming/Python/AI/Datasets/ImageData/FGVCAirCraftImageDataset"
   index2label = load_label_data(dataset_path)
 
